@@ -1,0 +1,475 @@
+/* .parallax_content {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-image: url(../img/location.jpg);
+}
+
+.img_bg_01 {
+  color: yellow;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../img/location.jpg);
+}
+.img_bg_02 {
+  color: yellow;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../img/mainvisual.jpg);
+}
+.img_bg_03 {
+  background-image: url();
+}
+.img_bg_04 {
+  width: 100%;
+  height: 50vh;
+  background-image: url(../img/menu.jpg);
+  background-repeat: no-repeat;
+}
+.img_bg_05 {
+  height: 100vh;
+  background-image: url();
+} */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: " Helvetica", "Neue", "Arial", "Hiragino Sans",
+    "Hiragino Kaku Gothic", "ProN、Meiryo", sans-serif;
+}
+
+#mainvisual {
+  background-image: url(../img/mainvisual.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 70%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+#mainvisual p {
+  font-size: 7.1875rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 4px;
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.food-other {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 50%;
+  justify-content: center;
+  margin-left: 60px;
+}
+
+.coffee {
+  border-right: solid #000 1px;
+  width: 50%;
+
+  margin-left: 60px;
+}
+
+.menu-list h2,
+#about h2 {
+  font-size: 2.75rem;
+  text-align: center;
+  margin-bottom: 50px;
+  border-bottom: red solid 8px;
+  width: 180px;
+  margin: 0 auto 50px auto;
+  font-weight: bold;
+}
+
+.top {
+  width: 100%;
+}
+
+.botomm {
+  width: 100%;
+}
+
+.menu-list td {
+  line-height: 3;
+}
+
+.menu-list table {
+  width: 100%;
+}
+
+.menu-list td:nth-child(1) {
+  width: 80%;
+  border-bottom: 1px dotted #333;
+}
+
+span {
+  vertical-align: bottom;
+}
+
+.menu {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/menu.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  background-attachment: fixed;
+}
+
+.menu p,
+.about p {
+  text-align: center;
+  font-size: 4.5rem;
+  /* ＃fff */
+  color: #fff;
+  font-weight: bold;
+}
+
+/* .about {
+  max-width: 1000px;
+  margin: 0 auto;
+} */
+
+.about {
+  background-image: url(../img/about.jpg);
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  margin-bottom: 90px;
+}
+
+.about-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-text > div {
+  max-width: 45%;
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 2.5;
+}
+
+/* なぜposition:relateve? */
+.buton-box {
+  width: 150px;
+  height: 50px;
+  margin: 100px auto 30px auto;
+  position: relative;
+  transition: 1s linear;
+}
+
+/* なぜposition:absolute? */
+.buton-box::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #f15a4a;
+  border-left: 3px solid #f15a4a;
+}
+
+/* なぜposition:absolute? */
+.buton-box::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid #f15a4a;
+  border-bottom: 3px solid #f15a4a;
+}
+
+.buton-box a {
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  display: block;
+  line-height: 3;
+}
+
+.buton-box:hover::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+
+  animation: before 300ms;
+  animation-fill-mode: forwards;
+}
+
+.buton-box:hover::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  animation: after 300ms;
+  animation-fill-mode: forwards;
+}
+
+.location {
+  margin-top: 150px;
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/location.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100vh;
+  position: relative;
+}
+
+.location p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+#ourstore {
+  margin-top: 50px;
+}
+
+#ourstore div {
+  max-width: 970px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#ourstore h2 {
+  font-size: 2.75rem;
+  text-align: center;
+  border-bottom: red solid 8px;
+  width: 245px;
+  margin: 0 auto 50px auto;
+  font-weight: bold;
+}
+
+footer {
+  width: 970px;
+  margin: 20px auto 0 auto;
+}
+
+footer p {
+  font-size: 0.85rem;
+}
+
+footer p:nth-child(3),
+footer p:nth-child(4),
+footer p:nth-child(5) {
+  margin-top: 10px;
+}
+
+footer p:nth-child(5) {
+  margin-bottom: 170px;
+}
+
+footer span {
+  display: block;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  #mainvisual {
+    background-image: url(../img/mainvisual.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 58%;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .menu-list {
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+
+  .coffee {
+    border-right: none;
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  .food-other {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  /* .menu-list td:nth-child(2) {
+    width: 50px;
+    display: inline-block;
+  } */
+
+  .menu-list table {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .menu-list td:nth-child(1) {
+    width: 90%;
+    border-bottom: 1px dotted #333;
+  }
+
+  .about-text > div {
+    max-width: 100%;
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 2.5;
+  }
+
+  footer {
+    width: 90%;
+  }
+
+  /* .menu,
+  .about,
+  .location {
+    height: 100px;
+  } */
+  .about-text {
+    width: 90%;
+  }
+
+  .menu p,
+  .about p,
+  .location p {
+    font-size: 2rem;
+  }
+
+  #ourstore h2 {
+    font-size: 1.23rem;
+    text-align: center;
+    border-bottom: red solid 5px;
+    width: 125px;
+    margin: 0 auto 50px auto;
+    font-weight: bold;
+  }
+
+  .menu-list h2,
+  #about h2 {
+    font-size: 1.25rem;
+    text-align: center;
+
+    border-bottom: red solid 5px;
+    width: 80px;
+    margin: 0 auto 20px auto;
+    font-weight: bold;
+  }
+
+  .top,
+  .botomm {
+    margin-top: 40px;
+  }
+
+  .about {
+    margin-bottom: 40px;
+  }
+
+  .buton-box {
+    margin-top: 50px;
+  }
+
+  .location {
+    margin-top: 50px;
+  }
+
+  .menu {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/menu.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-attachment: scroll;
+  }
+
+  .location {
+    margin-top: 150px;
+    width: 100%;
+    height: 100px;
+    background-image: url(../img/location.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100% 100vh;
+    position: relative;
+  }
+
+  .about {
+    background-image: url(../img/about.jpg);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: scroll;
+    margin-bottom: 90px;
+  }
+}

@@ -1,0 +1,29 @@
+@keyframes before {
+  0% {
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #f15a4a;
+    border-left: 3px solid #f15a4a;
+  }
+  100% {
+    width: 145px;
+    height: 47px;
+    border-top: 3px solid #f15a4a;
+    border-left: 3px solid #f15a4a;
+  }
+}
+
+@keyframes after {
+  0% {
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #f15a4a;
+    border-right: 3px solid #f15a4a;
+  }
+  100% {
+    width: 145px;
+    height: 47px;
+    border-bottom: 3px solid #f15a4a;
+    border-right: 3px solid #f15a4a;
+  }
+}
